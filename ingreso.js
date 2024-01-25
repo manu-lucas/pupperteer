@@ -6,6 +6,7 @@ const datosUsuario = {};
 
 export default async function ingreso(cuit,contraseña) {
   const browser = await puppeteer.launch({
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH
     // slowMo: 70,
     // headless: false,
   });
